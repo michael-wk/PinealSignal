@@ -1,9 +1,27 @@
 local RunService = game:GetService("RunService")
 
+local Types = require(script.t)
+
 local Signal = {}
 
 Signal.data = {
     Initialized = false
+}
+
+
+Signal.Signals = {
+    Server = {
+        be = {},
+        bf = {}
+    },
+    Client = {
+        be = {},
+        bf = {}
+    },
+    Shared = {
+        re = {},
+        rf = {}
+    }
 }
 
 function Signal:Init()
@@ -15,8 +33,6 @@ function Signal:Init()
 
     end
 end
-
-
 
 function Signal:_createDirectory()
     
@@ -71,8 +87,44 @@ end
 
 
 
-function Signal:_createClientDirectory()
+function Signal.GetSignal(key: string)
+end
+
+function Signal.RemoveSignal(key: string)
+end
+
+function Signal.NewSignal(key: string, bindable: boolean, config: Types.SignalConfig)
+
+end
+
+function Signal.NewFunction(key: string, bindable: boolean, config: Types.SignalConfig)
+
+end
+
+
+function Signal:Bind(callback, action: string) : RBXScriptConnection
     
 end
+
+function Signal:Unbind(action: string)
+    
+end
+
+function Signal:SetConfig(config: Types.SignalConfig )
+    
+end
+
+
+--- Middleware
+
+function Signal:SetMiddlewareIn(callback)
+
+end
+
+function Signal:SetMiddlewareOut(callback)
+
+end
+    
+
 
 return Signal
