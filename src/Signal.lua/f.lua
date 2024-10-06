@@ -7,7 +7,14 @@ function f.new(key: string, bindable:  boolean)
     local func = {Key = key, 
         Callbacks = {},
         MiddwareIn = nil,
-        MiddlewareOut = nil
+        MiddlewareOut = nil,
+
+        config = {
+            QUEUE_PERIOD = nil,
+            DEBUG_PRINTS = nil,
+            MIDDLEWARE_IN = nil,
+            MIDDLEWARE_OUT = nil
+        }
     }
 
     local instance
