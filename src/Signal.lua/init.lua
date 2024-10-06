@@ -1,5 +1,8 @@
 local RunService = game:GetService("RunService")
 
+local signal = require(script.s)
+local func = require(script.f)
+
 local Types = require(script.t)
 
 local Signal = {}
